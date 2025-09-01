@@ -5,7 +5,6 @@
 [![License](https://img.shields.io/badge/License-MIT-green.svg?style=for-the-badge)](LICENSE)
 
 Spin up and manage multiple **Ubuntu cloud-image VMs** on a single Linux host using **Infrastructure as Code**.  
-This lab is great for **cloud engineers, DevOps learners, and homelab enthusiasts** who want a repeatable way to practice virtualization fundamentals.
 
 ---
 
