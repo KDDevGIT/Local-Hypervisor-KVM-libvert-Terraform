@@ -28,4 +28,13 @@ newgrp libvirt
 sudo systemctl enable --now libvirtd
 virsh net-start default || true
 virsh net-autostart default || true
+```
+## QuickStart
+```bash
+git clone https://github.com/<your-user>/terraform-libvirt-lab.git
+cd terraform-libvirt-lab
+cp terraform.tfvars.example terraform.tfvars
+# (edit vm_count, memory, CPU, ssh key, etc.)
+```
+
 
