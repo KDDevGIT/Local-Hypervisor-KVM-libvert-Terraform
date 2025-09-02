@@ -1,4 +1,4 @@
-# Terraform + libvirt Local Hypervisor Lab
+# Terraform + libvirt Local Hypervisor (Linux VM)
 
 [![Terraform](https://img.shields.io/badge/Terraform-%235835CC.svg?style=for-the-badge&logo=terraform&logoColor=white)](https://www.terraform.io/)
 [![KVM](https://img.shields.io/badge/KVM-QEMU-red?style=for-the-badge&logo=linux&logoColor=white)](https://www.linux-kvm.org/)
