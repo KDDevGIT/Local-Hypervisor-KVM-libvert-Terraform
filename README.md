@@ -69,5 +69,42 @@ terraform destroy -auto-approve
 | `ssh_public_key_file` | `~/.ssh/id_ed25519.pub` | SSH public key path               |
 | `image_url`           | Ubuntu 24.04 LTS        | Base cloud image URL              |
 
+# Example
+```bash
+ssh ubuntu@192.168.122.103 #lab-1
+# first connect: type 'yes', no password needed (SSH key injected)
+```
+## Inside the VM:
+```bash
+uname -a
+systemctl is-active qemu-guest-agent
+ip -4 a
+```
+## If qemu-guest-agent isn't active
+```bash
+sudo systemctl enable --now qemu-guest-agent
+```
+## To Install Desktop + VNC Server in VM
+```bash
+# FOR XFCE (Light, Recommended)
+sudo apt update
+sudo apt install -y xfce4 xfce4-goodies tightvncserver
+```
+## GNOME (Heavy Option)
+```bash
+sudo apt install -y ubuntu-desktop
+```
+## Install Graphical Display Manager (lightDM)
+```bash
+sudo apt install -y lightdm
+sudo systemctl enable lightdm
+sudo reboot
+```
+## VNC to :0 and you’ll get the XFCE login screen.
+```bash
+virsh -c qemu:///system vncdisplay lab-1
+Should Print: :0
+```
+
 
 
